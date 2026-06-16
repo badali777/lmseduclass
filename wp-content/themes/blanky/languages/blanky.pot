@@ -1,0 +1,75 @@
+# Copyright (C) 2025 369work
+# This file is distributed under the GNU General Public License v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Blanky 1.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/blanky\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-20T00:00:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: hand-extracted\n"
+"X-Domain: blanky\n"
+
+#. Theme Name of the theme
+msgid "Blanky"
+msgstr ""
+
+#: functions.php:37
+msgid "Blanky Patterns"
+msgstr ""
+
+#: functions.php:38
+msgid "Patterns provided by the Blanky theme."
+msgstr ""
+
+#: functions.php:85
+msgid "No featured image"
+msgstr ""
+
+#: patterns/404-content.php:13 patterns/search-results.php:42
+msgid "Search"
+msgstr ""
+
+#: patterns/404-content.php:16
+msgid "Page Not Found"
+msgstr ""
+
+#: patterns/404-content.php:20
+msgid "Sorry, but the page you were looking for could not be found."
+msgstr ""
+
+#: patterns/archive-query-loop.php:47 patterns/query-loop.php:37
+msgid "Sorry, we could not find anything. Try searching with different keywords."
+msgstr ""
+
+#: patterns/comments.php:14
+msgid "Comments"
+msgstr ""
+
+#: patterns/footer.php:28
+msgid "All rights reserved."
+msgstr ""
+
+#: patterns/front-page-query.php:47
+msgid "No posts found. Check back soon!"
+msgstr ""
+
+#: patterns/more-posts.php:15
+msgid "More Posts"
+msgstr ""
+
+#: patterns/post-single.php:51
+msgid "Previous Article"
+msgstr ""
+
+#: patterns/post-single.php:52
+msgid "Next Article"
+msgstr ""
+
+#: patterns/search-results.php:42
+msgid "No results found. Please try a different search term."
+msgstr ""
