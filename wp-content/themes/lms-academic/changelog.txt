@@ -1,0 +1,44 @@
+2026 March 16 Version 1.0.13 ❄️
+* Compatibility testing with WordPress 6.9.4
+* FIXED: Minor Issues
+
+2026 January 30 Version 1.0.12 ❄️
+* Compatibility testing with WordPress 6.9
+* Fixed minor issue related to Breadcrumb option
+
+2025 August 08- Version 1.0.11 ❄️
+* Updated minimum PHP version requirement to 7.4
+* FIXED: Minor Issues Fixed
+
+2025 June 09- Version 1.0.10 ❄️
+* Compatibility testing with WordPress 6.8
+
+2024 August 12- Version 1.0.9 ❄️
+* Feature: Breadcrumb, Back to top
+* Compatibility testing with WordPress 6.6
+* Header Icons Updated 
+
+2024 January 20- Version 1.0.8❄️
+FIXED: Minor Issues Fixed
+
+2021 December 14 - Version 1.0.7 ☀️
+* FIXED: Minor Issues fixed
+
+2021 September 18 - Version 1.0.6 ☀️
+* FIXED: Minor Issues fixed
+
+2020 September 10 - Version 1.0.5 🦉
+* FIXED: Minor Issues fixed
+
+2020 September 10 - Version 1.0.4 🦁
+* UPDATED: One Click Demo Importer implemented
+
+2020 September 02 - Version 1.0.3 🐞
+* FIXED: Minor Issues fixed
+
+2020 August 30 - Version 1.0.1 🐞
+* FIXED: Minor Issues fixed
+
+2020 August 09 - Version 1.0.0 🦎
+* Initial release
+

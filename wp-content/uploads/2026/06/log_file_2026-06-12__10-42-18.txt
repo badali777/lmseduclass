@@ -1,0 +1,42 @@
+
+---Downloaded files---
+The import files for: Lawyer Firm were successfully downloaded!
+Initial max execution time = 30
+Files info:
+Site URL = http://localhost/wordpress
+Data file = /var/www/html/wordpress/wp-content/uploads/2026/06/demo-content-import-file_2026-06-12__10-42-18.xml
+Widget file = /var/www/html/wordpress/wp-content/uploads/2026/06/demo-widgets-import-file_2026-06-12__10-42-18.json
+Customizer file = /var/www/html/wordpress/wp-content/uploads/2026/06/demo-customizer-import-file_2026-06-12__10-42-18.dat
+Redux files:
+not defined!
+
+------
+New AJAX call!
+
+
+---Importing widgets---
+Sidebar : 
+
+Cari - Search - Imported
+Kategori - Categories - Imported
+Pos-pos Terbaru - Recent Posts - Imported
+
+lawyerfirm_footer_1 : Sidebar does not exist in theme (moving widget to Inactive)
+
+Teks - About Us - Imported to Inactive
+
+lawyerfirm_footer_2 : Sidebar does not exist in theme (moving widget to Inactive)
+
+Pos-pos Terbaru - Recent Posts - Imported to Inactive
+
+lawyerfirm_footer_3 : Sidebar does not exist in theme (moving widget to Inactive)
+
+Cari - Search - Imported to Inactive
+
+
+
+---Importing customizer settings---
+Error: The customizer import file is not suitable for current theme. You can only import customizer settings for the same theme or a child theme.
+
+---ocdi/after_import---
+
