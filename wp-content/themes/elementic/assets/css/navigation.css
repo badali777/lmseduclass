@@ -1,0 +1,744 @@
+/**
+ * Navigation styles for Elementic theme
+ */
+
+/* Main Navigation */
+.main-navigation {
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+.main-navigation ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+/* Submenu styles */
+.main-navigation ul ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #fff;
+    min-width: 200px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Nested submenus */
+.main-navigation ul ul ul {
+    left: 100%;
+    top: 0;
+}
+
+.main-navigation li {
+    position: relative;
+}
+
+/* Show submenu on hover and keyboard focus */
+.main-navigation li:hover>ul,
+.main-navigation li.focus>ul,
+.main-navigation li:focus-within>ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Ensure sub-menu items are keyboard accessible */
+.main-navigation li.focus>ul a,
+.main-navigation li:focus-within>ul a {
+    position: relative;
+    z-index: 1;
+}
+
+/* Visual focus indicator for keyboard navigation */
+.main-navigation a:focus-visible {
+    outline: 2px solid var(--elementic-primary-color);
+    outline-offset: -2px;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Menu links */
+.main-navigation a {
+    display: block;
+    text-decoration: none;
+    padding: 15px 20px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Current page indicators */
+.main-navigation .current_page_item>a,
+.main-navigation .current-menu-item>a,
+.main-navigation .current_page_ancestor>a,
+.main-navigation .current-menu-ancestor>a {
+    color: #0073aa;
+    font-weight: 600;
+}
+
+/* Mobile menu toggle button */
+.main-navigation .menu-toggle {
+    display: none;
+    background: var(--elementic-primary-color);
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-navigation .menu-toggle:hover,
+.main-navigation .menu-toggle:focus {
+    background: var(--elementic-secondary-color);
+    outline: 3px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.menu-toggle .screen-reader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.menu-toggle .menu-icon {
+    font-size: 24px;
+    line-height: 1;
+}
+
+/* Mobile styles (hamburger active up to 1024px) */
+@media screen and (max-width: 1220px) {
+    .main-navigation .menu-toggle {
+        display: flex;
+    }
+
+    .main-navigation ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    .main-navigation.toggled ul,
+    .main-navigation.toggled>.menu {
+        display: block;
+    }
+
+    .main-navigation ul ul {
+        position: static;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        padding-left: 20px;
+    }
+
+    .main-navigation ul ul.toggled,
+    .main-navigation li.menu-open>ul,
+    .main-navigation li.focus>ul,
+    .main-navigation li.submenu-open>ul,
+    .main-navigation li.menu-open>.sub-menu,
+    .main-navigation li.submenu-open>.sub-menu {
+        display: block;
+    }
+
+    .main-navigation ul ul a {
+        padding-left: 30px;
+    }
+
+    .main-navigation ul ul ul a {
+        padding-left: 50px;
+    }
+}
+
+/* Numeric pagination styles */
+.numeric-pagination {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.numeric-pagination-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.numeric-pagination-list .page-item a,
+.numeric-pagination-list .page-item span {
+    display: inline-block;
+    padding: 8px 12px;
+    color: #333;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    text-decoration: none;
+}
+
+.numeric-pagination-list .page-item.current span {
+    background: var(--elementic-primary-color);
+    color: #fff;
+    border-color: var(--elementic-primary-color);
+}
+
+.numeric-pagination-list .page-item a:hover {
+    background: #f5f5f5;
+}
+
+/* Two column blog layout */
+.blog-two-column {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+/* Stronger specificity for the main + sidebar when inside the blog wrapper */
+.blog-two-column>#primary.site-main {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.blog-two-column>.right-sidebar {
+    flex: 0 0 320px;
+    max-width: 320px;
+}
+
+.right-sidebar .category-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.right-sidebar .category-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.right-sidebar .category-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+.right-sidebar .category-item .count {
+    color: #777;
+    margin-left: 6px;
+    font-size: 0.95em;
+}
+
+/* Categories widget header: title + action button */
+.el-categories-widget .widget-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.el-categories-widget .widget-title-wrapper .widget-title {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+.el-view-all-cats {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid var(--elementic-primary-color);
+    color: var(--elementic-primary-color);
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    line-height: 1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.el-view-all-cats:hover,
+.el-view-all-cats:focus {
+    background: color-mix(in srgb, var(--elementic-primary-color) 8%, #ffffff);
+    text-decoration: none;
+    outline: 3px solid var(--elementic-primary-color);
+    outline-offset: 2px;
+}
+
+@media screen and (max-width: 900px) {
+    .blog-two-column {
+        flex-direction: column;
+    }
+
+    .blog-two-column>.right-sidebar {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* Category card styling */
+.el-blog-loop {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 24px;
+    margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+    .el-blog-loop {
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .el-blog-loop {
+        grid-template-columns: 1fr;
+    }
+}
+
+.category-card {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 18px;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 14px;
+    transition: box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+    .category-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+.category-card .el-card-media {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.category-card .el-card-thumb,
+.category-card .el-thumb-placeholder {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #f3f3f3;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover .el-card-thumb {
+    transform: scale(1.02);
+}
+
+.category-card .el-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.category-card .el-card-header {
+    margin: 0 0 12px;
+}
+
+.category-card .el-card-title {
+    margin: 0 0 10px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+.category-card .el-card-title a {
+    color: #222;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.category-card .el-card-title a:hover {
+    color: var(--elementic-primary-color);
+}
+
+.category-card .el-card-meta {
+    margin: 8px 0 12px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.category-card .el-card-excerpt {
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.category-card .el-card-excerpt p {
+    margin: 0 0 8px;
+}
+
+.category-card .el-card-excerpt p:last-child {
+    margin-bottom: 0;
+}
+
+/* Page header and main content width constraint */
+#primary.site-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.page-header {
+    max-width: 100%;
+    margin: 0 0 40px;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.posts-container {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Mobile Menu Submenu Toggle Styles (match hamburger breakpoint at 1024px) */
+@media screen and (max-width: 1220px) {
+
+    /* Parent menu items with children */
+    .main-navigation .menu-item-has-children,
+    .site-offcanvas-row .menu-item-has-children,
+    .mobile-menu .menu-item-has-children,
+    .el-menu-box__nav .menu-item-has-children {
+        position: relative;
+    }
+
+    /* Main menu item links with children */
+    .main-navigation .menu-item-has-children>a,
+    .site-offcanvas-row .menu-item-has-children>a,
+    .mobile-menu .menu-item-has-children>a,
+    .el-menu-box__nav .menu-item-has-children>a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        border-radius: 6px;
+        margin-bottom: 4px;
+        padding: 14px 20px;
+        background: rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+        transition: all 0.3s ease;
+        font-weight: 500;
+    }
+
+    /* Hover state for parent items */
+    .main-navigation .menu-item-has-children>a:hover,
+    .site-offcanvas-row .menu-item-has-children>a:hover,
+    .mobile-menu .menu-item-has-children>a:hover,
+    .el-menu-box__nav .menu-item-has-children>a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Add arrow indicator for parent menu items */
+    .main-navigation .menu-item-has-children>a::after,
+    .site-offcanvas-row .menu-item-has-children>a::after,
+    .mobile-menu .menu-item-has-children>a::after,
+    .el-menu-box__nav .menu-item-has-children>a::after {
+        content: '\25BC';
+        font-size: 12px;
+        margin-left: auto;
+        padding-left: 12px;
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+        color: #ffffff;
+        line-height: 1;
+    }
+
+    /* Rotate arrow when submenu is open */
+    .main-navigation .menu-item-has-children.submenu-open>a::after,
+    .site-offcanvas-row .menu-item-has-children.submenu-open>a::after,
+    .mobile-menu .menu-item-has-children.submenu-open>a::after,
+    .el-menu-box__nav .menu-item-has-children.submenu-open>a::after {
+        content: '\25B2';
+        transform: none;
+    }
+
+    /* Highlight parent item when submenu is open - Orange background */
+    .main-navigation .menu-item-has-children.submenu-open>a,
+    .site-offcanvas-row .menu-item-has-children.submenu-open>a,
+    .mobile-menu .menu-item-has-children.submenu-open>a,
+    .el-menu-box__nav .menu-item-has-children.submenu-open>a {
+        background: var(--elementic-primary-color, #FF7601);
+        color: #ffffff;
+        font-weight: 600;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .main-navigation .menu-item-has-children.submenu-open>a::after,
+    .site-offcanvas-row .menu-item-has-children.submenu-open>a::after,
+    .mobile-menu .menu-item-has-children.submenu-open>a::after,
+    .el-menu-box__nav .menu-item-has-children.submenu-open>a::after {
+        color: #ffffff;
+    }
+
+    /* Hide submenus by default in mobile menu */
+    .main-navigation .sub-menu,
+    .site-offcanvas-row .sub-menu,
+    .mobile-menu .sub-menu,
+    .el-menu-box__nav .sub-menu {
+        display: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 8px;
+        margin-bottom: 12px;
+        background: #ffffff;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        list-style: none;
+    }
+
+    /* Show submenu when parent is open */
+    .main-navigation .menu-item-has-children.submenu-open>.sub-menu,
+    .site-offcanvas-row .menu-item-has-children.submenu-open>.sub-menu,
+    .mobile-menu .menu-item-has-children.submenu-open>.sub-menu,
+    .el-menu-box__nav .menu-item-has-children.submenu-open>.sub-menu {
+        display: block;
+        animation: slideDown 0.3s ease-out;
+    }
+
+    /* Submenu items styling */
+    .main-navigation .sub-menu li,
+    .site-offcanvas-row .sub-menu li,
+    .mobile-menu .sub-menu li,
+    .el-menu-box__nav .sub-menu li {
+        margin: 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .main-navigation .sub-menu li:last-child,
+    .site-offcanvas-row .sub-menu li:last-child,
+    .mobile-menu .sub-menu li:last-child,
+    .el-menu-box__nav .sub-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .main-navigation .sub-menu li a,
+    .site-offcanvas-row .sub-menu li a,
+    .mobile-menu .sub-menu li a,
+    .el-menu-box__nav .sub-menu li a {
+        padding: 14px 20px;
+        background: transparent;
+        color: #333333;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 0.2s ease;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .main-navigation .sub-menu li a:hover,
+    .site-offcanvas-row .sub-menu li a:hover,
+    .mobile-menu .sub-menu li a:hover,
+    .el-menu-box__nav .sub-menu li a:hover {
+        background: #f8f9fa;
+        color: var(--elementic-primary-color, #FF7601);
+        padding-left: 24px;
+    }
+
+    /* Nested submenu styling (2nd level) - Indented with lighter background */
+
+    /* Nested submenu styling (2nd level) - Indented with lighter background */
+    .main-navigation .sub-menu .menu-item-has-children>a::after,
+    .site-offcanvas-row .sub-menu .menu-item-has-children>a::after,
+    .mobile-menu .sub-menu .menu-item-has-children>a::after,
+    .el-menu-box__nav .sub-menu .menu-item-has-children>a::after {
+        content: '\25BC';
+        font-size: 11px;
+        color: #666666;
+        transition: transform 0.3s ease;
+    }
+
+    /* Nested submenu styling (2nd level) - Clean indented list */
+    .main-navigation .sub-menu .menu-item-has-children>a,
+    .site-offcanvas-row .sub-menu .menu-item-has-children>a,
+    .mobile-menu .sub-menu .menu-item-has-children>a,
+    .el-menu-box__nav .sub-menu .menu-item-has-children>a {
+        background: transparent;
+        font-weight: 500;
+        margin-left: 0;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #f0f0f0;
+        padding-left: 30px;
+        /* Increase indentation */
+    }
+
+    /* Active/Open State for nested items - subtle highlight */
+    .main-navigation .sub-menu .menu-item-has-children.submenu-open>a,
+    .site-offcanvas-row .sub-menu .menu-item-has-children.submenu-open>a,
+    .mobile-menu .sub-menu .menu-item-has-children.submenu-open>a,
+    .el-menu-box__nav .sub-menu .menu-item-has-children.submenu-open>a,
+    .main-navigation .sub-menu .current-menu-ancestor>a,
+    .site-offcanvas-row .sub-menu .current-menu-ancestor>a,
+    .mobile-menu .sub-menu .current-menu-ancestor>a,
+    .el-menu-box__nav .sub-menu .current-menu-ancestor>a,
+    .main-navigation .sub-menu .current-menu-parent>a,
+    .site-offcanvas-row .sub-menu .current-menu-parent>a,
+    .mobile-menu .sub-menu .current-menu-parent>a,
+    .el-menu-box__nav .sub-menu .current-menu-parent>a {
+        background: #f9f9f9;
+        color: var(--elementic-primary-color, #FF7601) !important;
+        border-left: 4px solid var(--elementic-primary-color, #FF7601);
+        padding-left: 26px;
+        /* 30px - 4px border */
+    }
+
+    .main-navigation .sub-menu .menu-item-has-children.submenu-open>a::after,
+    .site-offcanvas-row .sub-menu .menu-item-has-children.submenu-open>a::after,
+    .mobile-menu .sub-menu .menu-item-has-children.submenu-open>a::after,
+    .el-menu-box__nav .sub-menu .menu-item-has-children.submenu-open>a::after {
+        transform: rotate(180deg);
+        color: var(--elementic-primary-color, #FF7601);
+    }
+
+    /* Nested submenus (3rd level and beyond) - More indentation */
+    .main-navigation .sub-menu .sub-menu,
+    .site-offcanvas-row .sub-menu .sub-menu,
+    .mobile-menu .sub-menu .sub-menu,
+    .el-menu-box__nav .sub-menu .sub-menu {
+        margin-left: 20px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        background: #fafafa;
+        border-left: 2px solid var(--elementic-primary-color, #FF7601);
+        border-radius: 4px;
+    }
+
+    .main-navigation .sub-menu .sub-menu li a,
+    .site-offcanvas-row .sub-menu .sub-menu li a,
+    .mobile-menu .sub-menu .sub-menu li a,
+    .el-menu-box__nav .sub-menu .sub-menu li a {
+        padding-left: 24px;
+        font-size: 14px;
+        color: #555555;
+    }
+
+    .main-navigation .sub-menu .sub-menu li a:hover,
+    .site-offcanvas-row .sub-menu .sub-menu li a:hover,
+    .mobile-menu .sub-menu .sub-menu li a:hover,
+    .el-menu-box__nav .sub-menu .sub-menu li a:hover {
+        padding-left: 28px;
+        color: var(--elementic-primary-color, #FF7601);
+    }
+
+    /* 4th level and beyond - Even more indentation */
+    .main-navigation .sub-menu .sub-menu .sub-menu,
+    .site-offcanvas-row .sub-menu .sub-menu .sub-menu,
+    .mobile-menu .sub-menu .sub-menu .sub-menu,
+    .el-menu-box__nav .sub-menu .sub-menu .sub-menu {
+        margin-left: 30px;
+        background: #f5f5f5;
+    }
+
+    .main-navigation .sub-menu .sub-menu .sub-menu li a,
+    .site-offcanvas-row .sub-menu .sub-menu .sub-menu li a,
+    .mobile-menu .sub-menu .sub-menu .sub-menu li a,
+    .el-menu-box__nav .sub-menu .sub-menu .sub-menu li a {
+        padding-left: 30px;
+        font-size: 13px;
+    }
+
+    /* Smooth transitions for submenu opening/closing */
+    .main-navigation .sub-menu,
+    .site-offcanvas-row .sub-menu,
+    .mobile-menu .sub-menu,
+    .el-menu-box__nav .sub-menu {
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Current menu item styling in submenus */
+    /* Current menu item styling in submenus - Matches ancestors now */
+    .main-navigation .sub-menu .current-menu-item>a,
+    .site-offcanvas-row .sub-menu .current-menu-item>a,
+    .mobile-menu .sub-menu .current-menu-item>a,
+    .el-menu-box__nav .sub-menu .current-menu-item>a {
+        background: #f9f9f9;
+        color: var(--elementic-primary-color, #FF7601);
+        font-weight: 600;
+        border-left: 4px solid var(--elementic-primary-color, #FF7601);
+        padding-left: 26px;
+    }
+
+    /* Slide down animation */
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Tablet-specific optimizations (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1220px) {
+
+    .main-navigation .menu-item-has-children>a,
+    .el-menu-box__nav .menu-item-has-children>a {
+        padding: 16px 24px;
+        font-size: 16px;
+    }
+
+    .main-navigation .sub-menu li a,
+    .el-menu-box__nav .sub-menu li a {
+        padding: 16px 24px;
+        font-size: 16px;
+    }
+
+    .main-navigation .sub-menu .sub-menu li a,
+    .el-menu-box__nav .sub-menu .sub-menu li a {
+        padding-left: 32px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #primary.site-main {
+        padding: 0px;
+    }
+}

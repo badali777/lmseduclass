@@ -1,0 +1,263 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 3,
+    "settings": {
+        "layout": {
+            "contentSize": "800px",
+            "wideSize": "1400px"
+        },
+        "useRootPaddingAwareAlignments": true,
+        "appearanceTools": true,
+        "color": {
+            "palette": [
+                {
+                    "slug": "primary",
+                    "color": "#3a6060",
+                    "name": "Primary"
+                },
+                {
+                    "slug": "secondary",
+                    "color": "#2d4d4d",
+                    "name": "Secondary"
+                },
+                {
+                    "slug": "accent",
+                    "color": "#4a7a7a",
+                    "name": "Accent"
+                },
+                {
+                    "slug": "highlight",
+                    "color": "#d4a574",
+                    "name": "Highlight"
+                },
+                {
+                    "slug": "foreground",
+                    "color": "#2c3333",
+                    "name": "Foreground"
+                },
+                {
+                    "slug": "background",
+                    "color": "#f9f7f3",
+                    "name": "Background"
+                },
+                {
+                    "slug": "surface",
+                    "color": "#f2efea",
+                    "name": "Surface"
+                },
+                {
+                    "slug": "white",
+                    "color": "#ffffff",
+                    "name": "White"
+                },
+                {
+                    "slug": "muted",
+                    "color": "#6b7280",
+                    "name": "Muted"
+                },
+                {
+                    "slug": "border",
+                    "color": "#e8e4de",
+                    "name": "Border"
+                }
+            ]
+        },
+        "custom": {
+            "chrome": {
+                "background": "#2c3333",
+                "text": "#d4d0c8",
+                "accent": "#7ab0a0",
+                "muted": "#6b7a7a",
+                "border": "#3d4a4a"
+            }
+        },
+        "spacing": {
+            "padding": true,
+            "margin": true,
+            "blockGap": true,
+            "units": ["px", "em", "rem", "%", "vh", "vw"],
+            "defaultSpacingSizes": false,
+            "spacingSizes": [
+                {
+                    "name": "2X-Small",
+                    "size": "0.25rem",
+                    "slug": "10"
+                },
+                {
+                    "name": "X-Small",
+                    "size": "0.5rem",
+                    "slug": "20"
+                },
+                {
+                    "name": "Small",
+                    "size": "1rem",
+                    "slug": "30"
+                },
+                {
+                    "name": "Medium",
+                    "size": "1.5rem",
+                    "slug": "40"
+                },
+                {
+                    "name": "Large",
+                    "size": "2rem",
+                    "slug": "50"
+                },
+                {
+                    "name": "X-Large",
+                    "size": "3rem",
+                    "slug": "60"
+                },
+                {
+                    "name": "2X-Large",
+                    "size": "4rem",
+                    "slug": "70"
+                },
+                {
+                    "name": "3X-Large",
+                    "size": "clamp(4rem, 5rem + 1vw, 6rem)",
+                    "slug": "80"
+                }
+            ]
+        },
+        "typography": {
+            "defaultFontSizes": false,
+            "dropCap": false,
+            "fluid": {
+                "maxViewportWidth": "1920px",
+                "minViewportWidth": "320px"
+            },
+            "fontFamilies": [
+                {
+                    "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+                    "name": "System Sans",
+                    "slug": "system-sans"
+                },
+                {
+                    "fontFamily": "'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif",
+                    "name": "Japanese Sans",
+                    "slug": "japanese-sans"
+                },
+                {
+                    "fontFamily": "'Hiragino Mincho ProN', 'Hiragino Serif', 'Noto Serif JP', serif",
+                    "name": "Japanese Serif",
+                    "slug": "japanese-serif"
+                },
+                {
+                    "fontFamily": "Georgia, 'Times New Roman', Times, serif",
+                    "name": "Serif",
+                    "slug": "serif"
+                }
+            ],
+            "fontSizes": [
+                {
+                    "name": "Extra Small",
+                    "size": "0.75rem",
+                    "slug": "xs"
+                },
+                {
+                    "name": "Small",
+                    "size": "0.875rem",
+                    "slug": "sm"
+                },
+                {
+                    "name": "Base",
+                    "size": "1rem",
+                    "slug": "base"
+                },
+                {
+                    "name": "Large",
+                    "size": "1.125rem",
+                    "slug": "lg"
+                },
+                {
+                    "name": "Extra Large",
+                    "size": "1.25rem",
+                    "slug": "xl"
+                },
+                {
+                    "name": "2X-Large",
+                    "size": "clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem)",
+                    "slug": "2xl"
+                },
+                {
+                    "name": "3X-Large",
+                    "size": "clamp(1.5rem, 1.425rem + 0.38vw, 1.875rem)",
+                    "slug": "3xl"
+                },
+                {
+                    "name": "4X-Large",
+                    "size": "clamp(1.875rem, 1.8rem + 0.38vw, 2.25rem)",
+                    "slug": "4xl"
+                },
+                {
+                    "name": "5X-Large",
+                    "size": "clamp(2rem, 1.8rem + 1vw, 3rem)",
+                    "slug": "5xl"
+                },
+                {
+                    "name": "6X-Large",
+                    "size": "clamp(2.5rem, 2.25rem + 1.25vw, 3.75rem)",
+                    "slug": "6xl"
+                }
+            ],
+            "lineHeight": true
+        }
+    },
+    "styles": {
+        "spacing": {
+            "blockGap": "0",
+            "padding": {
+                "top": "0",
+                "right": "var(--wp--preset--spacing--40)",
+                "bottom": "0",
+                "left": "var(--wp--preset--spacing--40)"
+            },
+            "margin": {
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0"
+            }
+        },
+        "color": {
+            "text": "var(--wp--preset--color--foreground)",
+            "background": "var(--wp--preset--color--background)"
+        },
+        "typography": {
+            "fontFamily": "var(--wp--preset--font-family--system-sans)",
+            "fontSize": "var(--wp--preset--font-size--base)",
+            "lineHeight": "1.6"
+        },
+        "elements": {
+            "h1": { "typography": { "fontSize": "var(--wp--preset--font-size--6xl)" } },
+            "h2": { "typography": { "fontSize": "var(--wp--preset--font-size--5xl)" } },
+            "h3": { "typography": { "fontSize": "var(--wp--preset--font-size--4xl)" } },
+            "h4": { "typography": { "fontSize": "var(--wp--preset--font-size--3xl)" } },
+            "h5": { "typography": { "fontSize": "var(--wp--preset--font-size--2xl)" } },
+            "h6": { "typography": { "fontSize": "var(--wp--preset--font-size--xl)" } },
+            "link": {
+                "typography": {
+                    "textDecoration": "underline"
+                },
+                ":hover": {
+                    "typography": {
+                        "textDecoration": "none"
+                    }
+                }
+            }
+        }
+    },
+    "templateParts": [
+        {
+            "area": "header",
+            "name": "header",
+            "title": "Header"
+        },
+        {
+            "area": "footer",
+            "name": "footer",
+            "title": "Footer"
+        }
+    ]
+}

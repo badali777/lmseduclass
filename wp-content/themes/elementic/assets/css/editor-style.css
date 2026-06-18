@@ -1,0 +1,16 @@
+/* editor-style.css — keep minimal, mirror front-end typography */
+.editor-styles-wrapper {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.editor-styles-wrapper h1 {
+    font-size: 36px;
+    line-height: 1.1;
+}
+
+.editor-styles-wrapper .wp-block-button .wp-block-button__link {
+    background: #f7931e;
+    color: #fff;
+    padding: 0.6em 1.2em;
+    border-radius: 6px;
+}

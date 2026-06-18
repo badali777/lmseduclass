@@ -1,8 +1,14 @@
 
 # BEGIN WPForms
+<<<<<<< HEAD
 # Arahan (baris) antara "BEGIN WPForms" dan "END WPForms"
 # dihasilkan secara dinamis, dan hanya dapat dimodifikasi melalui filter WordPress.
 # Setiap perubahan pada arahan di antara penanda berikut akan ditimpa.
+=======
+# The directives (lines) between "BEGIN WPForms" and "END WPForms" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+>>>>>>> 583c4482676312ec62f2bc5765c57bcd168e496c
 # Disable PHP and Python scripts parsing.
 <Files *>
   SetHandler none

@@ -1,0 +1,37 @@
+<!-- wp:template-part {"slug":"header","theme":"blanky","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main", "className":"blanky-main", "layout":{"type":"constrained"}} -->
+<main id="main-content" class="blanky-main wp-block-group">
+    <!-- wp:group {"align":"full","className":"container","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group alignfull container">
+        <!-- wp:pattern {"slug":"blanky/post-single"} /-->
+
+        <!-- wp:separator {"align":"wide","className":"is-style-wide"} -->
+        <hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-wide" />
+        <!-- /wp:separator -->
+
+        <!-- wp:group {"align":"wide","className":"block-inner","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group alignwide block-inner">
+            <!-- wp:pattern {"slug":"blanky/comments"} /-->
+        </div>
+        <!-- /wp:group -->
+
+        <!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+        <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:separator {"align":"wide","className":"is-style-wide"} -->
+        <hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-wide" />
+        <!-- /wp:separator -->
+
+        <!-- wp:group {"align":"wide","className":"block-inner","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group alignwide block-inner">
+            <!-- wp:pattern {"slug":"blanky/more-posts"} /-->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"blanky","tagName":"footer"} /-->

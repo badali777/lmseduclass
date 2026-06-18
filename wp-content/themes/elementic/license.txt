@@ -1,0 +1,8 @@
+Elementic — License
+
+This theme is released under the GNU General Public License v2 (or later).
+
+You may view the license here:
+https://www.gnu.org/licenses/gpl-2.0.html
+
+Copyright (c) 2025 harsh175
